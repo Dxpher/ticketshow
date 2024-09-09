@@ -1,0 +1,33 @@
+CREATE TABLE "event" (
+	"e_id"	INTEGER NOT NULL UNIQUE,
+	"e_name"	TEXT NOT NULL,
+	"e_date"	TEXT NOT NULL,
+	"e_venue"	TEXT NOT NULL,
+	"e_time"	TEXT NOT NULL,
+	"e_cost"	INTEGER NOT NULL,
+	"e_desc"	TEXT NOT NULL,
+	"o_id"	INTEGER NOT NULL,
+	"e_yt_id"	TEXT NOT NULL,
+	PRIMARY KEY("e_id" AUTOINCREMENT),
+	CONSTRAINT "o_by" FOREIGN KEY("e_id") REFERENCES "organizer"("o_id")
+);
+
+
+
+
+CREATE TABLE "organizer" (
+	"o_id"	INTEGER NOT NULL,
+	"o_name"	TEXT NOT NULL,
+	"o_number"	INTEGER NOT NULL,
+	PRIMARY KEY("o_id" AUTOINCREMENT)
+);
+
+
+CREATE TABLE "user" (
+	"useremail"	TEXT NOT NULL UNIQUE,
+	"username"	TEXT NOT NULL,
+	"password"	TEXT NOT NULL,
+	PRIMARY KEY("useremail")
+);
+
+
