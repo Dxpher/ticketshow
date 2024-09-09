@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+{% block style %}
+<style>
+  .add {
+      margin: 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      
+	  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(30px);
+	
+	color:white;
+		text-align:justify;
+    }
+  #des {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #ple {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  ul {
+    font-size: 16px;
+    margin-left: 40px;
+  }
+  .even
+  {
+  margin:10px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}</div class="even">
+<h1 style="color:white ;">Add Event to Webgala</h1>
+<div class="add">
+  <h1>Dear user please note:</h1>
+  <p id="des">Adding an event is a simple process that allows you to showcase your upcoming event to a wider audience. To get started, gather
+  the necessary details about your event, such as the event name, date, venue, time, ticket cost, description, YouTube video ID, organizer
+  name, and organizer number. Once you have all the information ready, you can email it to our dedicated event management team at <strong><u>2k02aditya@gmail.com</u></strong>
+  Our team will review the details and ensure everything is in order. Once approved, your event will be added to our platform, reaching
+  a larger audience and increasing the visibility of your event. Don't miss this opportunity to make your event a success!"
+  </p>  
+  <h2 id="ple">Please email the following information to add your event:</h2>
+    
+  <ul>
+    <li>Event Name:</li>
+    <li>Date:</li>
+    <li>Venue:</li>
+    <li>Time:</li>
+    <li>Ticket Cost:</li>
+    <li>Description:</li>
+    <li>YouTube Video ID:</li>
+    <li>Organizer Name:</li>
+    <li>Organizer Number:</li>
+  </ul>
+  </div></div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!-- base.html -->
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="../static/css/homestyle.css">
+	{% block style%}
+	
+	
+	
+	{% endblock %}
+	
+</head>
+<header>  
+<nav>  
+<ul>  
+<li>  
+<a href="/dashboard"> Dashboard </a>  
+</li>  
+<li>  
+<a href="/about"> About </a>  
+</li>  
+<li>  
+<a href="/contact"> Contact </a>  
+</li>  
+<li> 
+<a href="/tou"> Terms of use </a>  
+</li>  
+<li>  
+<a href="/add"> Add Event </a>  
+</li> 
+</ul>    
+<div class="dropdown">
+        <span class="dropbtn">{{username}}</span>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="/logout">Logout</a>
+        </div>
+      </div> 
+</nav>
+</header>
+ {% block content %}
+ {% endblock %}
+</div>
+</body>
+</html>

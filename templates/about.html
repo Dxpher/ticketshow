@@ -1,0 +1,51 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block title %} about-us {% endblock %}
+{% block style%}
+  <style>
+    
+.add {
+
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(30px);
+    color:white;
+	
+	
+    }
+    
+  </style>
+{% endblock %}
+<body>
+{% block content %}
+
+<div class="add">
+<div class="add1" >
+<h1 > The WebGALA Team </h1>
+</div>
+<div class="add2">
+<h1>About the project</h1>
+<p style="font-size:25px;">
+This is a <strong>python web application</strong> designed for event management at a smaller scale. 
+The app requires an authenticated and auhthorized user to access the application features. Users can view multiple shows and events.
+ For every event and show there is a unique ID, name, place, capacity, etc.The system automatically displays the latest added shows.
+ The app is an event briefing platform that utilises the concept of venues and shows. The multi-user app we are designing
+ includes a core feature of user login, authentication and authorization.<br><br>
+ To create an account users will have to enter 3 main details<strong> [Email , Username , Password] </strong> .Overall the 
+ login feature will ensure that users have the appropriate access to the app's functionality and data.
+ After user logs in , the app will show multiple events put up by the admin in the form of interactive event cards and it will direct 
+ you to the event details. It will include the event  name ,the event poster as a display picture. The user can get to know the details about any particular event or 
+ show  as per their choice and interest and using the provided contact information any user can contact the ticket distributor. 
+ <br><br>
+ After user logs in , the app will show multiple events put up by the admin in the form of interactive event cards and it will direct 
+ you to the event details. It will include the event  name ,the event poster as a display picture. The user can get to know the details about any particular event or 
+ show  as per their choice and interest and using the provided contact information any user can contact the ticket distributor.
+</p>
+</div>
+</div>
+{% endblock %}

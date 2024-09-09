@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | Aditya Tiwari</title>
+      <link rel="stylesheet" href="../static/css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+<!-- alert message -->
+{% if message %}
+      <div class="alert">
+         
+         <span class ="closebtn" onclick="this.parentElement.style.display = 'none';"> &times </span>
+      {{message}}
+	  </div>
+      {% endif %}
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form method="POST" class="login" id="formLogin" action="/">
+                  <div class="field">
+                     <input type="email" placeholder="Email Address" name="email" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" name="submit" value="login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form method ="POST"  class="signup" id="formSignup" action="/">
+                  <div class="field">
+                     <input type="email" placeholder="Email Address" name="email" required>
+                  </div>
+				  <div class="field">
+                     <input type="text" placeholder="Username" name="username"  minlength="3" maxlength="10"required>
+                  </div>
+				  <div class="field">
+                     <input type="password" placeholder="Password" id="password" name="password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="confirm_password" id="confirm_password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" name="submit" value="signup">
+                  </div>
+				  </div>
+				
+				   
+				  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+    <script src="../static/js/script.js"></script>
+   </body>
+</html>

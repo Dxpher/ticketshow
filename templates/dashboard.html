@@ -1,0 +1,30 @@
+<!--dashboard-->
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+	{% for event in allevent %}
+	<a href="/eventdetail?image_id_value={{event[0]}}" style="text-decoration:none ; color:white;">
+		<div class="card">
+		
+        <div class="content">
+          <div class="imgBx">
+		  
+            <img src="{{ url_for('static', filename='images/event_img/' ~ event[0]) ~ '.jpeg' }}" alt="{{event[1]}}" >
+          </div>
+          
+        </div>
+        <ul class="sci">
+          <li>{{event[1]}}</li>
+          
+        </ul>
+      </div>
+	  </a>
+	    {% endfor %}
+    </div>
+  </section>
+{% endblock %}

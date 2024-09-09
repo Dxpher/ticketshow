@@ -1,0 +1,136 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+ {% block title %}Event Details -{{event[1]}}{% endblock %}
+ {% block style%}
+<style>
+.main {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  
+}
+
+.date-venue p {
+  color: white;
+  font-size: 20px;
+}
+
+.date-venue {
+  height: 100%;
+  width: 50%;
+  display:flex;
+  justify-content: space-between;
+  align-item: center;
+  
+}
+
+.yt {
+  height: 100%;
+  width: 50%;
+  
+  
+}
+
+.desc {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+  font-size: 15px;
+  text-align: justify;
+  color:white;
+}
+
+.whole {
+  width: 100%;
+  margin-top:100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.organizer {
+  color: white;
+  font-size: 25px;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(30px);
+}
+.dv1
+{
+width:20%;
+color:white;
+}
+.dv2
+{
+width:80%;
+display:flex;
+flex-direction: column;
+}
+
+</style>
+
+  {% endblock %}
+{% block content %}
+<div class="whole">
+
+					<div class="main">
+						
+							<div class="date-venue">
+							<div class="div1"><h1 style="color:white;"> {{ event[1]}} </h1></div><hr>
+							<div class="dv2">
+						<p>Date: {{ event[2] }}</p>
+						<p>Venue: {{ event[3] }}</p>
+						<p>Starts from:{{event[4]}}</p>
+						<p>Ticket-cost:{{event[5]}}</p>
+						</div></div>
+							<div class="yt">
+							<div id="player"></div><script src="https://www.youtube.com/iframe_api"></script>
+							<script>
+			// This function creates an <iframe> (and YouTube player) after the API code downloads.
+				function onYouTubeIframeAPIReady() {
+					new YT.Player('player', {
+						height: '100%',
+						width: '100%',
+						videoId: '{{event[8]}}', // Replace 'VIDEO_ID' with the actual YouTube video ID
+						playerVars: {
+							autoplay: 0, // Autoplay the video
+							controls: 0, // Hide the video controls
+							
+							loop: 1, // Loop the video
+							modestbranding: 1, // Remove YouTube logo from the video
+							rel: 0, // Don't show related videos after playback
+							showinfo: 0 // Hide video information
+									}				
+											});
+													}
+					</script>
+					</div>
+					</div>
+					<div class="desc">
+						<h3>Event Detail</h3>
+							<p>{{event[6]}}</p>
+					<hr style="color:white";>
+					</div>
+					<div class="organizer">
+						<h2>Organizer Details</h2>
+						
+							<ul>
+								<li>Organizer Name : {{orga[1]}}</li><br>
+								<li>Contact-info : {{orga[2]}}</li>
+							</ul>
+						</div>
+					
+  </div>
+  {% endblock %}
